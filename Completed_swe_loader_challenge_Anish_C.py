@@ -34,8 +34,7 @@ def load_csv_files(directory_path):
             print(f"Error reading {file}: {e}")
     
     return all_data
-# Example usage
-#data_directory = './data/ctg_ticks/'
+
 all_ticks_data = load_csv_files(directory_path)
 def clean_data(data):
     """
