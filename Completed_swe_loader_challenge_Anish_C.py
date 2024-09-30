@@ -68,7 +68,7 @@ def clean_data(data):
         seen_entries.add((timestamp, price, size))
         
         cleaned_data.append((timestamp, price, size))
-    print ("dataloader ran")
+    #print ("datacleaner ran")
     return cleaned_data
 
 # Example of cleaning the loaded data
@@ -128,14 +128,14 @@ def generate_ohlcv(data, interval_str, start_time, end_time):
     
     return ohlcv_data
 
-# Example usage for generating OHLCV data
+
 start_time = datetime(2024, 9, 16, 9, 30)
 end_time = datetime(2024, 9, 16, 16, 0)
 
 interval = input("Select interval")
 
 ohlcv_data = generate_ohlcv(cleaned_ticks_data, interval, start_time, end_time)
-print (ohlcv_data)
+#print (ohlcv_data)
 
 
 with open('OHLCV_output'+interval+".csv", mode='w', newline='') as file:
